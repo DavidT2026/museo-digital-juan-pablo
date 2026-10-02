@@ -6,10 +6,7 @@
   <meta name="description" content="Museo Digital de la Memoria Barrial – Juan Pablo II y Compartir, Ciudad Bolívar.">
   <title>Museo Digital de la Memoria | Juan Pablo II</title>
 
-  <link rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.css">
 
   <link rel="stylesheet" href="css/estilo.css">
 </head>
@@ -40,7 +37,14 @@
     </section>
 
     <section class="mapa-seccion" aria-label="Mapa de memorias barriales">
-      <div id="mapa" role="application" aria-label="Mapa interactivo de memorias barriales"></div>
+      <div id="mapa" role="application" aria-label="Mapa 3D interactivo de memorias barriales">
+        <div class="mapa-ayuda-3d">⛰️ <strong>Territorio en 3D</strong><br>Inclina, gira y acerca el mapa para explorar el relieve de Ciudad Bolívar.</div>
+        <div class="mapa-modo">
+          <button type="button" onclick="mostrarVista2D()">Vista 2D</button>
+          <button type="button" onclick="mostrarVista3D()">Vista 3D</button>
+          <button type="button" onclick="recentrarTerritorio()">Recentrar</button>
+        </div>
+      </div>
     </section>
 
     <section class="leyenda">
@@ -79,11 +83,7 @@
       <p>Museo Digital de la Memoria · Proyecto de investigación y memoria barrial</p>
     </div>
   </footer>
-
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-  <script src="js/mapa.js"></script>
+  <script src="https://unpkg.com/maplibre-gl@6.11.2/dist/maplibre-gl.js"></script>
+<script src="js/mapa.js"></script>
 </body>
 </html>
