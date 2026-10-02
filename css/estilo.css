@@ -90,9 +90,142 @@ h1 {
 }
 
 #mapa {
+  position: relative;
   width: 100%;
   height: 620px;
-  background: #e5e7eb;
+  background: #dbeafe;
+}
+
+.mapa-ayuda-3d {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  left: 14px;
+  max-width: 310px;
+  padding: 10px 13px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 3px 12px rgba(15,23,42,.18);
+  color: #334155;
+  font-size: .78rem;
+  line-height: 1.35;
+  pointer-events: none;
+}
+
+.mapa-modo {
+  position: absolute;
+  z-index: 10;
+  right: 14px;
+  bottom: 14px;
+  display: flex;
+  gap: 6px;
+}
+
+.mapa-modo button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 7px 10px;
+  background: rgba(255,255,255,.95);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: .75rem;
+  cursor: pointer;
+  box-shadow: 0 2px 7px rgba(15,23,42,.15);
+}
+
+.mapa-modo button:hover {
+  background: #f8fafc;
+}
+
+.mapa-memoria {
+  width: 250px;
+}
+
+.mapa-lugar {
+  width: 270px;
+}
+
+.mapa-popup h3 {
+  margin: 0 0 5px;
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.mapa-popup .sector {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: .78rem;
+  margin-bottom: 7px;
+}
+
+.mapa-popup p {
+  color: #475569;
+  font-size: .82rem;
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.mapa-popup audio {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
+
+.mapa-popup .audio-ayuda {
+  margin-top: 5px;
+  color: #64748b;
+  font-size: .7rem;
+  text-align: center;
+}
+
+.icono-lugar-3d {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,.96);
+  border: 3px solid #1e293b;
+  box-shadow: 0 3px 8px rgba(15,23,42,.4);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.icono-lugar-3d.movilidad { border-color: #7c3aed; }
+.icono-lugar-3d.parque { border-color: #15803d; }
+.icono-lugar-3d.cultura { border-color: #ea580c; }
+.icono-lugar-3d.iglesia { border-color: #b45309; }
+.icono-lugar-3d.educacion { border-color: #2563eb; }
+.icono-lugar-3d.equipamiento { border-color: #475569; }
+
+.marker-memoria-3d {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: #2563eb;
+  box-shadow: 0 3px 9px rgba(15,23,42,.45);
+  font-size: 15px;
+}
+
+.maplibregl-popup-content {
+  padding: 15px;
+  border-radius: 9px;
+}
+
+.maplibregl-popup-close-button {
+  font-size: 20px;
+  color: #475569;
+}
+
+.maplibregl-ctrl-group button {
+  width: 32px;
+  height: 32px;
 }
 
 .popup-memoria {
