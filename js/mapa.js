@@ -6,7 +6,7 @@ const relatosComunitarios = [
     descripcion: "Testimonio sobre los espacios de encuentro y vivencias cotidianas.",
     lat: 4.5512,
     lng: -74.1620,
-    archivoAudio: "audio/audio1.mp3"
+    archivoAudio: "audio1.mp3"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const relatosComunitarios = [
     descripcion: "Narrativa místico-metafórica sobre la apropiación del territorio.",
     lat: 4.5583,
     lng: -74.1565,
-    archivoAudio: "audio/audio2.mp3"
+    archivoAudio: "audio2.mp3"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const relatosComunitarios = [
     descripcion: "Voces de la tercera generación tardía en los límites del barrio.",
     lat: 4.5601,
     lng: -74.1540,
-    archivoAudio: "audio/audio3.mp3"
+    archivoAudio: "audio3.mp3"
   }
 ];
 
