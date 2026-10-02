@@ -65,3 +65,127 @@ relatosComunitarios.forEach((punto) => {
 window.addEventListener("load", () => {
   setTimeout(() => mapa.invalidateSize(), 300);
 });
+
+/* ============================================================
+   LUGARES SIGNIFICATIVOS DEL TERRITORIO
+   Fuentes de referencia:
+   - TransMiCable / TransMilenio
+   - IDRD
+   - Arquidiócesis de Bogotá
+   - fuentes cartográficas de OpenStreetMap
+   ============================================================ */
+
+const lugaresSignificativos = [
+  {
+    nombre: "Estación TransMiCable Juan Pablo II",
+    categoria: "Movilidad",
+    icono: "🚡",
+    lat: 4.55572,
+    lng: -74.14748,
+    descripcion: "Estación Juan Pablo II del sistema TransMiCable de Ciudad Bolívar. Está ubicada en el entorno de la Calle 67C Sur con Carrera 18R.",
+    direccion: "Cl. 67A/67C Sur con Cra. 18R",
+    clase: "movilidad"
+  },
+  {
+    nombre: "Parque Juan Pablo II",
+    categoria: "Parque",
+    icono: "🌳",
+    lat: 4.55439,
+    lng: -74.14809,
+    descripcion: "Espacio público del barrio Juan Pablo II, utilizado para actividades recreativas y comunitarias.",
+    direccion: "Cl. 67B Sur #18N-12",
+    clase: "parque"
+  },
+  {
+    nombre: "Plazoleta del Sapo",
+    categoria: "Memoria y cultura",
+    icono: "🐸",
+    lat: 4.55445,
+    lng: -74.14855,
+    descripcion: "Espacio emblemático del barrio Juan Pablo II, asociado a la memoria colectiva, la vida comunitaria y las expresiones culturales del territorio.",
+    direccion: "Cra. 18Q #68B-18 Sur",
+    clase: "cultura"
+  },
+  {
+    nombre: "Parroquia María Reina de los Apóstoles",
+    categoria: "Iglesia",
+    icono: "⛪",
+    lat: 4.55555,
+    lng: -74.14820,
+    descripcion: "Parroquia ubicada en el sector de Juan Pablo II y vinculada a la vida comunitaria del territorio.",
+    direccion: "Cra. 18Q Bis B #67C-48 Sur",
+    clase: "iglesia"
+  },
+  {
+    nombre: "IED Santa Bárbara",
+    categoria: "Educación",
+    icono: "🏫",
+    lat: 4.55305,
+    lng: -74.14699,
+    descripcion: "Institución educativa ubicada en el entorno inmediato del barrio Juan Pablo II.",
+    direccion: "Ciudad Bolívar, Bogotá",
+    clase: "educacion"
+  },
+  {
+    nombre: "CAI Compartir",
+    categoria: "Equipamiento comunitario",
+    icono: "🛡️",
+    lat: 4.55725,
+    lng: -74.14646,
+    descripcion: "Equipamiento de seguridad ubicado en el entorno de Compartir y Juan Pablo II.",
+    direccion: "Sector Compartir, Ciudad Bolívar",
+    clase: "equipamiento"
+  }
+];
+
+
+/* ============================================================
+   ICONOS DE LOS LUGARES
+   ============================================================ */
+
+function crearIconoLugar(icono, clase) {
+  return L.divIcon({
+    className: "icono-lugar-contenedor",
+    html: `
+      <div class="icono-lugar ${clase}">
+        <span>${icono}</span>
+      </div>
+    `,
+    iconSize: [38, 38],
+    iconAnchor: [19, 19],
+    popupAnchor: [0, -20]
+  });
+}
+
+
+/* ============================================================
+   MARCADORES DE LUGARES SIGNIFICATIVOS
+   ============================================================ */
+
+lugaresSignificativos.forEach((lugar) => {
+
+  const marcadorLugar = L.marker(
+    [lugar.lat, lugar.lng],
+    {
+      icon: crearIconoLugar(lugar.icono, lugar.clase),
+      zIndexOffset: 500
+    }
+  ).addTo(mapa);
+
+  const popupLugar = `
+    <div class="popup-lugar">
+      <div class="categoria-lugar">${lugar.categoria}</div>
+      <h3>${lugar.icono} ${lugar.nombre}</h3>
+      <p>${lugar.descripcion}</p>
+      <div class="direccion-lugar">
+        <strong>Ubicación:</strong> ${lugar.direccion}
+      </div>
+    </div>
+  `;
+
+  marcadorLugar.bindPopup(popupLugar, {
+    maxWidth: 320,
+    minWidth: 270
+  });
+
+});
