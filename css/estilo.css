@@ -214,3 +214,88 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   LUGARES SIGNIFICATIVOS
+   ============================================================ */
+
+.icono-lugar-contenedor {
+  background: transparent !important;
+  border: none !important;
+}
+
+.icono-lugar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #1e293b;
+  box-shadow: 0 3px 8px rgba(15, 23, 42, .35);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.icono-lugar.movilidad {
+  border-color: #7c3aed;
+}
+
+.icono-lugar.parque {
+  border-color: #15803d;
+}
+
+.icono-lugar.cultura {
+  border-color: #ea580c;
+}
+
+.icono-lugar.iglesia {
+  border-color: #b45309;
+}
+
+.icono-lugar.educacion {
+  border-color: #2563eb;
+}
+
+.icono-lugar.equipamiento {
+  border-color: #475569;
+}
+
+.popup-lugar {
+  width: 270px;
+}
+
+.popup-lugar h3 {
+  margin: 4px 0 7px;
+  color: #0f172a;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.popup-lugar p {
+  margin: 0 0 8px;
+  color: #475569;
+  font-size: .82rem;
+  line-height: 1.4;
+}
+
+.categoria-lugar {
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #334155;
+  font-size: .68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.direccion-lugar {
+  padding-top: 7px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: .72rem;
+  line-height: 1.35;
+}
