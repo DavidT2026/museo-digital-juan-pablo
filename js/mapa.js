@@ -22,8 +22,8 @@ style:{
 version:8,
 sources:{
 osm:{type:"raster",tiles:["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],tileSize:256,maxzoom:19,attribution:"© OpenStreetMap contributors"},
-terreno:{type:"raster-dem",tiles:["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"],tileSize:256,maxzoom:15,encoding:"terrarium",attribution:"© AWS Open Data / Mapzen"},
-relieve:{type:"raster-dem",tiles:["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"],tileSize:256,maxzoom:15,encoding:"terrarium"}},
+terreno:{type:"raster-dem",tiles:["https://tiles.mapterhorn.com/{z}/{x}/{y}.webp"],tileSize:512,maxzoom:17,encoding:"terrarium",attribution:"© AWS Open Data / Mapzen"},
+relieve:{type:"raster-dem",tiles:["https://tiles.mapterhorn.com/{z}/{x}/{y}.webp"],tileSize:512,maxzoom:17,encoding:"terrarium"}},
 layers:[
 {id:"fondo",type:"background",paint:{"background-color":"#dbeafe"}},
 {id:"osm",type:"raster",source:"osm",paint:{"raster-saturation":-0.15,"raster-contrast":0.05}},
