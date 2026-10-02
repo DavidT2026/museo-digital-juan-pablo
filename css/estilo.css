@@ -432,3 +432,13 @@ footer {
   font-size: .72rem;
   line-height: 1.35;
 }
+
+
+/* MapLibre 3D */
+#mapa{position:relative;}
+.mapa-ayuda-3d{position:absolute;z-index:10;top:14px;left:14px;max-width:310px;padding:10px;background:rgba(255,255,255,.94);border-radius:8px;box-shadow:0 3px 12px rgba(15,23,42,.18);font-size:.78rem;line-height:1.35;pointer-events:none;}
+.mapa-modo{position:absolute;z-index:10;right:14px;bottom:14px;display:flex;gap:6px;}
+.mapa-modo button{border:1px solid #cbd5e1;border-radius:7px;padding:7px 10px;background:rgba(255,255,255,.95);color:#0f172a;font-weight:700;font-size:.75rem;cursor:pointer;}
+.marker-memoria-3d{width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:3px solid white;background:#2563eb;box-shadow:0 3px 9px rgba(15,23,42,.45);font-size:15px;}
+.icono-lugar-3d{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.96);border:3px solid #1e293b;box-shadow:0 3px 8px rgba(15,23,42,.4);font-size:19px;}
+.maplibregl-popup-content{padding:15px;border-radius:9px;}
